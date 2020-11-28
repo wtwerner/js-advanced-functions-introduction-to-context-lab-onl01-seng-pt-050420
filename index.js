@@ -33,7 +33,7 @@ function createTimeOutEvent(record, time) {
 }
 
 function hoursWorkedOnDate(record, time) {
-    let timeIn = record.timeInEvents.find(e => e.date == time)
+    let timeIn = record.timeInEvents.find(e => e.date === time)
     let timeOut = record.timeOutEvents.find(e => e.date === time)
     return (timeOut.hour - timeIn.hour)/100
 }
